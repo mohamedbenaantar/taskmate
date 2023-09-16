@@ -6,11 +6,19 @@ import { ShowTask } from './components/ShowTask';
 function App() {
 
   const [taskList, setTaskList] = useState([])
+  // perfom a specific task for a specific element
+  const [task, setTask] = useState({});
   return (
     <div >
       <Header/>
-      <AddTask taskList={taskList} setTaskList={setTaskList}/>
-      <ShowTask taskList={taskList} setTaskList={setTaskList}/>
+      <AddTask taskList={taskList}
+       setTaskList={setTaskList}
+        task={task}
+         setTask={setTask}/>
+      <ShowTask taskList={taskList} 
+      setTaskList={setTaskList}
+       task={task} 
+       setTask={setTask}/>
 
     </div>
   );

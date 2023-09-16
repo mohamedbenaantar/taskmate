@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const AddTask = ({taskList, setTaskList}) => {
+export const AddTask = ({taskList, setTaskList, task, setTask}) => {
   const handleSubmit = (e) => {
       e.preventDefault();
 
