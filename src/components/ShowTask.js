@@ -3,11 +3,11 @@ import React from 'react'
 export const ShowTask = ({taskList, setTaskList, task, setTask}) => {
  const handleEdit = (id) => {
     const selectedTask = taskList.find(todo => todo.id === id);
-    setTask({selectedTask})
+    setTask(selectedTask)
  }
  
  const handleDelete = (id) => {
-    const updatedTaskList = taskList.filter(todo => todo.id !==id);
+    const updatedTaskList = taskList.filter(todo => todo.id !== id);
     setTaskList(updatedTaskList); 
  }
 
@@ -23,14 +23,14 @@ export const ShowTask = ({taskList, setTaskList, task, setTask}) => {
         </div>
 
         <ul>
-            {taskList.map((task) => (
-            <li key={task.id}>
+            {taskList.map((todo) => (
+            <li key={todo.id}>
             <p>
-                <span className="name">{task.name}</span>
-                <span className="time">{task.time}</span>
+                <span className="name">{todo.name}</span>
+                <span className="time">{todo.time}</span>
             </p>
-            <i onClick={() => handleEdit(task.id)} className="bi bi-pencil-fill"></i>
-            <i onClick={() => handleDelete(task.id)} className="bi bi-trash"></i>
+            <i className="bi bi-pencil-fill" onClick={() => handleEdit(todo.id)}></i>
+            <i className="bi bi-trash" onClick={() => handleDelete(todo.id)}></i>
         </li>
             
             ) )}

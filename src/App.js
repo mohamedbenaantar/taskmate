@@ -5,20 +5,14 @@ import { AddTask } from './components/AddTask';
 import { ShowTask } from './components/ShowTask';
 function App() {
 
-  const [taskList, setTaskList] = useState([])
+  const [taskList, setTaskList] = useState([] || JSON.parse(localStorage.getItem('taskList')));
   // perfom a specific task for a specific element
   const [task, setTask] = useState({});
   return (
     <div >
       <Header/>
-      <AddTask taskList={taskList}
-       setTaskList={setTaskList}
-        task={task}
-         setTask={setTask}/>
-      <ShowTask taskList={taskList} 
-      setTaskList={setTaskList}
-       task={task} 
-       setTask={setTask}/>
+      <AddTask taskList={taskList} setTaskList={setTaskList} task={task} setTask={setTask}/>
+      <ShowTask taskList={taskList} setTaskList={setTaskList} task={task} setTask={setTask}/>
 
     </div>
   );
