@@ -173,8 +173,10 @@ header .themeSelector .activeTheme{
 .showTask .clearAll{
   background-color: #0f6af3;
   color: #FFFFFF;
-  padding: 5px 10px;
+  padding: 10px 10px;
   border-radius: 5px;
+  margin-left: 1000px;
+  margin-top:10px;
   cursor: pointer;
 }
 

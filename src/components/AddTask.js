@@ -2,6 +2,11 @@ import React from 'react'
 
 export const AddTask = () => {
   return (
-    <div>AddTask</div>
+    <section className="addTask">
+      <form>
+        <input type="text" name="task" placeholder="Add Task"  autoComplete='off'/>
+        <button type="submit">Add</button>
+      </form>
+    </section>
   )
 }
